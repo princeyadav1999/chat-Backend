@@ -29,7 +29,8 @@ const io = new Server(server);
 
 
  app.get('/', (req, res) => {
- return res.sendFile("./Chat-frontend" + "/index.html", { root: path.resolve() });
+ // return res.sendFile("./Chat-frontend" + "/index.html", { root: path.resolve() });
+     res.status(200).json({message:"helo"})
 });
 
 server.listen(3008, () => console.log("Server Start"));
