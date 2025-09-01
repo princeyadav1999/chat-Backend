@@ -10,7 +10,7 @@ const server = http.createServer(app);
  //Enable CORS for React dev server
 const io = new Server(server, {
   cors: {
-    origin: 'http://localhost:5173', // replace with your React dev URL
+    origin: 'https://chat-app-sage-sigma.vercel.app/', // replace with your React dev URL
     methods: ['GET', 'POST'],
   },
 });
