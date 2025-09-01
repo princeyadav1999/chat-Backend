@@ -8,28 +8,28 @@ const app = express();
 const server = http.createServer(app);
 
  //Enable CORS for React dev server
-const io = new Server(server, {
-  cors: {
-    origin: 'https://chat-app-sage-sigma.vercel.app/', // replace with your React dev URL
-    methods: ['GET', 'POST'],
-  },
-});
+// const io = new Server(server, {
+//   cors: {
+//     origin: 'https://chat-app-sage-sigma.vercel.app/', // replace with your React dev URL
+//     methods: ['GET', 'POST'],
+//   },
+// });
 
-app.use(cors());
+// app.use(cors());
 
 // Socket.io handling
-io.on('connection', (socket) => {
-  console.log('User connected:', socket.id);
+// io.on('connection', (socket) => {
+//   console.log('User connected:', socket.id);
 
-  socket.on('user-send-message', (message) => {
-    console.log('Message from user:', message);
-    io.emit('message', message); // broadcast to all clients
-  });
+//   socket.on('user-send-message', (message) => {
+//     console.log('Message from user:', message);
+//     io.emit('message', message); // broadcast to all clients
+//   });
 
-  socket.on('disconnect', () => {
-    console.log('User disconnected:', socket.id);
-  });
-});
+//   socket.on('disconnect', () => {
+//     console.log('User disconnected:', socket.id);
+//   });
+// });
 
  //If you are NOT serving static frontend files, this is optional
 app.get('/', (req, res) => {
