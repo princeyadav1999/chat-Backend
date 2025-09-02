@@ -10,7 +10,7 @@ const server = http.createServer(app);
  //Enable CORS for React dev server
 const io = new Server(server, {
   cors: {
-    origin: 'http://localhost:5173', // replace with your React dev URL
+    origin: 'https://chat-frontend-nine-omega.vercel.app', // replace with your React dev URL
     methods: ['GET', 'POST'],
   },
 });
